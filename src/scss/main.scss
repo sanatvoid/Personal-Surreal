@@ -1,0 +1,12 @@
+@use 'base';
+@use 'abstracts' as *;
+// @use 'components' as *;
+// @use 'pages' as *;
+// @use 'vendors' as *;
+
+body{
+    background: $red;
+    h1{
+        color: $blue;
+    }
+}
