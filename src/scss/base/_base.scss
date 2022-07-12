@@ -1,0 +1,23 @@
+@use 'abstracts' as *;
+
+body{
+    background-color: $ps-bg;
+    color: $ps-font;
+}
+
+.wrp{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.center{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.fillRed{
+    fill:red
+}
+// .m-0-au{
+//     margin: 0 auto;
+// }

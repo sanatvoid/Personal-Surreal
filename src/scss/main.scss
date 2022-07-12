@@ -4,9 +4,17 @@
 // @use 'pages' as *;
 // @use 'vendors' as *;
 
-body{
-    background: $gray-100;
-    h1{
-        color: $blue;
-    }
+.monk{
+    width: 30%;
+}
+
+.monkWire svg{
+    position: absolute;
+    top: -69%;
+    height: 200vh;
+    z-index: -1;
+}
+
+.monkWire svg .wire1{
+    z-index: 0;
 }

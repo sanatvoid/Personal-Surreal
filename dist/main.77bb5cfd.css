@@ -1,3 +1,34 @@
+@font-face {
+  font-family: "bb";
+  src: url("/bodonibook-webfont.5ffa32f1.woff2") format("woff2"), url("/bodonibook-webfont.891c823c.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "bb-i";
+  src: url("/bodonibookitalic-webfont.a9673019.woff2") format("woff2"), url("/bodonibookitalic-webfont.38c8423b.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background-color: #2F2F2F;
+  color: #ffffff;
+}
+
+.wrp {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.fillRed {
+  fill: red;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -10,6 +41,8 @@
   margin: 0;
   padding: 0;
   font: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -60,11 +93,28 @@ svg {
     scroll-behavior: auto !important;
   }
 }
-body {
-  background: #999;
+html {
+  font-family: "bb", serif;
 }
-body h1 {
-  color: #00f;
+
+h1 {
+  font-family: "bb-i", serif;
+  font-size: 2.8125rem;
+}
+
+.monk {
+  width: 30%;
+}
+
+.monkWire svg {
+  position: absolute;
+  top: -69%;
+  height: 200vh;
+  z-index: -1;
+}
+
+.monkWire svg .wire1 {
+  z-index: 0;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
