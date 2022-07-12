@@ -5872,28 +5872,52 @@ exports.default = exports.gsap = gsapWithCSS;
 
 var _gsap = require("gsap");
 
-console.log('hello world');
-var wires = document.getElementsByClassName('wires'); // gsap.from(wires,{
-//     scale:5, 
-//     opacity: 0, 
-//     duration: 10,
-//     orgin: "center center"
-// });
-//Mouse Move
+console.log('hello world'); // get a random number between -100 and 100 (no snapping)
+
+_gsap.gsap.utils.random(-100, 100);
+
+var wires = document.getElementsByClassName('wires');
+var monk = document.getElementsByClassName('monk'); //Mouse Move
 
 document.addEventListener('mousemove', move);
 
-function move(event) {
-  _gsap.gsap.to(wires, {
-    x: event.movementX * 2,
-    y: event.movementY * 2,
-    // scale:1.1,
-    // scale: event.movementX,
-    // opacity: -event.movementX,
-    duration: 1,
-    stagger: 0.03
-  });
+function move(event) {// gsap.to(wires,{
+  //     x: event.movementX*2.5,
+  //     y: event.movementY*2.5,
+  //     duration: 1,
+  //     stagger: 0.03
+  // });
+} //Mouse Move
+
+
+document.addEventListener('mousemove', move2);
+
+function move2(event) {// gsap.to(monk,{
+  //     x: event.movementX,
+  //     y: event.movementY,
+  //     duration: 0.5
+  // });
 }
+
+var tl = _gsap.gsap.timeline({
+  repeat: -1,
+  yoyo: true
+});
+
+tl.to(monk, {
+  ease: "Power4.easeIn",
+  x: 0,
+  y: -15,
+  duration: 2,
+  delay: 0
+}).to(wires, {
+  ease: "Power4.easeInOut",
+  x: 0,
+  y: -50,
+  duration: 2,
+  stagger: 0.06
+});
+tl.play();
 },{"gsap":"../node_modules/gsap/index.js"}],"js/main.js":[function(require,module,exports) {
 "use strict";
 
@@ -5926,7 +5950,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62651" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54155" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

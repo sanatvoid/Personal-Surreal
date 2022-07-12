@@ -29,6 +29,19 @@ body {
   fill: red;
 }
 
+.flex {
+  display: flex;
+}
+
+.f-align {
+  align-items: center;
+  justify-content: center;
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -102,19 +115,101 @@ h1 {
   font-size: 2.8125rem;
 }
 
+h2 {
+  font-size: 2.375rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
 .monk {
   width: 30%;
 }
 
-.monkWire svg {
+.monkWireCont {
+  height: 100vh;
+  width: 100%;
   position: absolute;
-  top: -69%;
-  height: 200vh;
+  top: 0;
+}
+.monkWireCont .monkWire {
+  overflow-x: clip;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.monkWireCont .monkWire svg {
+  width: 140%;
+  max-width: 1000%;
+  position: absolute;
+  margin: 0 auto;
+  margin-top: 100vh;
+  overflow-x: hidden;
+  z-index: -1;
+}
+.monkWireCont .monkWire svg .wire1 {
+  z-index: 0;
+}
+
+.wrp {
+  position: relative;
+}
+.wrp .nav {
+  position: absolute;
+  padding: 1rem;
+  justify-content: space-between;
+  width: 100%;
+}
+.wrp .nav .logoCont {
+  background: #2F2F2F;
+  padding-right: 10px;
+}
+.wrp .nav img {
+  width: 40px;
+}
+.wrp .nav .logoText {
+  padding-left: 12px;
+  font-size: 1.4rem;
+  letter-spacing: 4px;
+}
+.wrp .nav .phone {
+  padding: 1rem;
+  background: #2F2F2F;
+  letter-spacing: 3px;
+}
+.wrp .hero::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  background: #212121;
+  border-radius: 100vh 100vh 0 0;
+  width: 100%;
+  height: 25vh;
   z-index: -1;
 }
 
-.monkWire svg .wire1 {
-  z-index: 0;
+.work {
+  background: #212121;
+  width: 100%;
+}
+.work .bluePlanetCont {
+  position: relative;
+  width: 100%;
+}
+.work .bluePlanetCont .workh2 {
+  position: relative;
+  z-index: 6;
+  flex-direction: column;
+  margin-top: -5rem;
+}
+.work .bluePlanetCont .workh2 h2 {
+  margin-top: 1rem;
+}
+.work .bluePlanetCont img.blueBase {
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  margin-top: -25vh;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

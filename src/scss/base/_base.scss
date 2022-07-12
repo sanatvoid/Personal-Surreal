@@ -18,6 +18,20 @@ body{
 .fillRed{
     fill:red
 }
+
+.flex{
+    display: flex;
+}
+
+.f-align{
+    align-items: center;
+    justify-content: center;
+}
+
+.h-100vh{
+    height: 100vh;
+}
+
 // .m-0-au{
 //     margin: 0 auto;
 // }
