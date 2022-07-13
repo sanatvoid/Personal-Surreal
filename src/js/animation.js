@@ -11,22 +11,22 @@ var monk = document.getElementsByClassName('monk');
 //Mouse Move
 document.addEventListener('mousemove', move);
 function move(event) {
-    // gsap.to(wires,{
-    //     x: event.movementX*2.5,
-    //     y: event.movementY*2.5,
-    //     duration: 1,
-    //     stagger: 0.03
-    // });
+    gsap.to(wires,{
+        x: event.movementX*2.5,
+        y: event.movementY*2.5,
+        duration: 1,
+        stagger: 0.03
+    });
 }
 
 //Mouse Move
 document.addEventListener('mousemove', move2);
 function move2(event) {
-    // gsap.to(monk,{
-    //     x: event.movementX,
-    //     y: event.movementY,
-    //     duration: 0.5
-    // });
+    gsap.to(monk,{
+        x: event.movementX,
+        y: event.movementY,
+        duration: 0.5
+    });
 }
 
 var tl = gsap.timeline({
