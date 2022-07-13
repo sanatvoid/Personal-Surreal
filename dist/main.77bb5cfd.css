@@ -1,12 +1,12 @@
 @font-face {
   font-family: "bb";
-  src: url("/bodonibook-webfont.5ffa32f1.woff2") format("woff2"), url("/bodonibook-webfont.891c823c.woff") format("woff");
+  src: url("bodonibook-webfont.5ffa32f1.woff2") format("woff2"), url("bodonibook-webfont.891c823c.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "bb-i";
-  src: url("/bodonibookitalic-webfont.a9673019.woff2") format("woff2"), url("/bodonibookitalic-webfont.38c8423b.woff") format("woff");
+  src: url("bodonibookitalic-webfont.a9673019.woff2") format("woff2"), url("bodonibookitalic-webfont.38c8423b.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -212,4 +212,4 @@ h2 {
   margin-top: -25vh;
 }
 
-/*# sourceMappingURL=/main.77bb5cfd.css.map */
+/*# sourceMappingURL=main.77bb5cfd.css.map */
