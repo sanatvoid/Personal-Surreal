@@ -5874,10 +5874,15 @@ var _gsap = require("gsap");
 
 console.log('hello world'); // get a random number between -100 and 100 (no snapping)
 
-_gsap.gsap.utils.random(-100, 100);
+_gsap.gsap.utils.random(-100, 100); // get variables
+
 
 var wires = document.getElementsByClassName('wires');
-var monk = document.getElementsByClassName('monk'); //Mouse Move
+var monk = document.getElementsByClassName('monk');
+var moons = {
+  red: document.getElementsByClassName('redMoon'),
+  yellow: document.getElementsByClassName('yellowMoon')
+}; //Mouse Move
 
 document.addEventListener('mousemove', move);
 
@@ -5919,7 +5924,41 @@ tl.to(monk, {
   duration: 2,
   stagger: 0.06
 });
-tl.play();
+tl.play(); // Animate moons Red
+
+var moveMoonRed = _gsap.gsap.timeline({
+  repeat: -1,
+  repeatRefresh: true,
+  yoyo: true
+});
+
+moveMoonRed.to(moons.red, {
+  ease: "Power4.ease",
+  x: "random(-39, 27, 5)",
+  //chooses a random number between -20 and 20 for each target, rounding to the closest 5!
+  y: "random(-42, 10, 3)",
+  rotate: "random(0, 10)",
+  duration: 2 // delay: 0,
+
+});
+moveMoonRed.play(); // Animate moons Yellow
+
+var moveMoonYellow = _gsap.gsap.timeline({
+  repeat: -1,
+  repeatRefresh: true,
+  yoyo: true
+});
+
+moveMoonYellow.to(moons.yellow, {
+  ease: "Power4.ease",
+  x: "random(-45, 30, 5)",
+  //chooses a random number between -20 and 20 for each target, rounding to the closest 5!
+  y: "random(-35, 26, 3)",
+  rotate: "random(0, 10)",
+  duration: 3 // delay: 0
+
+});
+moveMoonYellow.play();
 },{"gsap":"../node_modules/gsap/index.js"}],"js/main.js":[function(require,module,exports) {
 "use strict";
 
@@ -5952,7 +5991,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54131" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50652" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -6129,4 +6168,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/main.js"], null)
-//# sourceMappingURL=main.fb6bbcaf.js.map
+//# sourceMappingURL=/main.fb6bbcaf.js.map

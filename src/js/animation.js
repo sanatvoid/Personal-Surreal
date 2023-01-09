@@ -4,8 +4,14 @@ console.log('hello world')
 
 // get a random number between -100 and 100 (no snapping)
 gsap.utils.random(-100, 100);
+
+// get variables
 var wires = document.getElementsByClassName('wires');
 var monk = document.getElementsByClassName('monk');
+var moons = {
+    red: document.getElementsByClassName('redMoon'),
+    yellow: document.getElementsByClassName('yellowMoon')
+};
 
 
 //Mouse Move
@@ -51,3 +57,37 @@ tl.to(monk,{
 tl.play();
 
 
+// Animate moons Red
+var moveMoonRed = gsap.timeline({
+    repeat: -1,
+    repeatRefresh:true,
+    yoyo: true
+});
+
+moveMoonRed.to(moons.red,{
+    ease:"Power4.ease",
+    x: "random(-39, 27, 5)", //chooses a random number between -20 and 20 for each target, rounding to the closest 5!
+    y: "random(-42, 10, 3)",
+    rotate: "random(0, 10)",
+    duration: 2,
+    // delay: 0,
+    
+    });
+moveMoonRed.play();
+
+// Animate moons Yellow
+var moveMoonYellow = gsap.timeline({
+    repeat: -1,
+    repeatRefresh:true,
+    yoyo: true
+});
+
+moveMoonYellow.to(moons.yellow,{
+    ease:"Power4.ease",
+    x: "random(-45, 30, 5)", //chooses a random number between -20 and 20 for each target, rounding to the closest 5!
+    y: "random(-35, 26, 3)",
+    rotate: "random(0, 10)",
+    duration: 3,
+    // delay: 0
+    });
+moveMoonYellow.play();

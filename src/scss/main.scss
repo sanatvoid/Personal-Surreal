@@ -98,7 +98,21 @@
             // margin: 0 -33%;
             margin-top: -25vh;
             // transform-origin: center center;
-        }
+        }       
+    }
+    .redMoon{
+        position: absolute;
+        top: 0;
+        left: -10%;
+        z-index: 5;
+        width: 40%;
+    }
+    .yellowMoon{
+        position: absolute;
+        bottom: 0;
+        right: -15%;
+        width: 40%;
+        z-index: 5;
     }
     // ::after{
     //     content: " ";
